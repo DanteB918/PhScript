@@ -1,6 +1,8 @@
 {
     "name": "dantebradshaw/phscript",
-    "description": "use php to write javascript",
+    "description": "use PHP to write JavaScript",
+    "keywords": ["javascript", "js"],
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "DanteB\\App\\": "src/"
