@@ -1,7 +1,17 @@
 # PhScript
 Composer package to write JavaScript using PHP.
 
-An example:
+[See more on the composer website](https://packagist.org/packages/dantebradshaw/phscript)
+
+## Installation
+
+Run this to install the package:
+```
+composer require dantebradshaw/phscript
+```
+
+## Example
+
 ```html
     <!--Consider the following HTML -->
     <form>
