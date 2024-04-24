@@ -9,12 +9,12 @@ class ComposerStaticInitbf23f2f379f4ce833d7f5be83a18c4c2
     public static $prefixLengthsPsr4 = array (
         'D' => 
         array (
-            'Danteb\\Phscript\\' => 16,
+            'DanteB\\App\\' => 11,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Danteb\\Phscript\\' => 
+        'DanteB\\App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),

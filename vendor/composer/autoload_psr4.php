@@ -6,5 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Danteb\\Phscript\\' => array($baseDir . '/src'),
+    'DanteB\\App\\' => array($baseDir . '/src'),
 );
