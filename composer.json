@@ -1,0 +1,16 @@
+{
+    "name": "dantebradshaw/phscript",
+    "description": "use php to write javascript",
+    "autoload": {
+        "psr-4": {
+            "DanteB\\App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Dante Bradshaw",
+            "email": "plansuperior@gmail.com"
+        }
+    ],
+    "require": {}
+}
