@@ -111,7 +111,7 @@ class PhScript
         return $this->string;
     }
 
-    public function reset()
+    public function reset(): void
     {
         $this->string = '';
     }
