@@ -40,4 +40,4 @@ composer require dantebradshaw/phscript
     ?>
 ```
 
-results in javascsript running without ever really needing to write any javascript. Of course, you'll want to put the scripts in the head or end of body in the document as you would a normal JS file.
+results in javascsript running without ever really needing to write any javascript. Of course, you'll want to put the scripts in the `<head>` or end of `<body>` in the document as you would a normal JS file.
