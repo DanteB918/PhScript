@@ -12,7 +12,7 @@ An example:
 ```
 ```php
     <?php
-        $script = new \DanteB\AppPhScript;
+        $script = new \DanteB\App\PhScript;
 
         $script->startScript(); // <script>
 
