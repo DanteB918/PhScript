@@ -6,15 +6,13 @@ An example:
     <!--Consider the following HTML -->
     <form>
         <input type="text" name="test" />
-
         <input type="text" id="text" />
-
         <input type="submit" />
     </form>
 ```
 ```php
     <?php
-        $script = new PhScript;
+        $script = new \DanteB\AppPhScript;
 
         $script->startScript(); // <script>
 
