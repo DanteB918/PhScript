@@ -55,60 +55,75 @@ class PhScript
         return $this;
     }
 
-    public function listener($event, $action, ?string $element = null): void
+    public function listener($event, $action, ?string $element = null): self
     {
         $element ??= $this->string;
 
-        echo $element.'.addEventListener("'.$event.'", function() {'. $action .'});';
+        $this->string = $element.'.addEventListener("'.$event.'", function() {'. $action .'})';
 
-        $this->reset();
+        return $this;
     }
 
-    public function html($html, ?string $element = null): void
+    public function html($html, ?string $element = null): self
     {
         $element ??= $this->string;
 
-        echo $element.'.innerHTML = '.$html.';';
+        $this->string = $element.'.innerHTML = '.$html;
 
-        $this->reset();
+        return $this;
     }
 
-    public function hide($html, ?string $element = null): void
+    public function hide(?string $element = null): self
     {
         $element ??= $this->string;
 
-        echo $element.'.style.display = "none";';
+        $this->string = $element.'.style.display = "none"';
 
-        $this->reset();
+        return $this;
     }
 
-    public function show($html, ?string $element = null): void
+    public function show(?string $element = null): self
     {
         $element ??= $this->string;
 
-        echo $element.'.style.display = "block";';
+        $this->string = $element.'.style.display = "block"';
 
-        $this->reset();
+        return $this;
     }
 
-    public function forEach($action, ?string $array = null): void
+    public function forEach($action, ?string $array = null): self
     {
         $array ??= $this->string;
 
-        echo $array.'.forEach( function() {'. $action .'});';
+        $this->string = $array.'.forEach( function(e) {'. $action .'})';
 
-        $this->reset();
+        return $this;
     }
 
-    public function end(): void
+    public function setString(?string $string = null): self
     {
-        echo $this->string.';';
+        $this->string = $string;
 
-        $this->reset();
+        return $this;
     }
+
+    public function end(): self
+    {
+        $this->string .= ';';
+
+        return $this;
+    }
+
     public function string(): string
     {
         return $this->string;
+    }
+
+    public function print(): void
+    {
+        echo $this->string;
+
+        $this->reset();
     }
 
     public function reset(): void

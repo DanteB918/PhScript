@@ -26,15 +26,15 @@ composer require dantebradshaw/phscript
 
         $script->startScript(); // <script>
 
-        $script->select('#text')->console()->end(); // console.log(document.querySelector('#text'));
+        $script->select('#text')->console()->end()->print(); // console.log(document.querySelector('#text'));
 
         $changeEvent = $script->console('this')->string(); // console.log(document.querySelector(this)) <- but saved as a PHP string
 
-        $script->select('#text')->listener('change', $changeEvent); // document.querySelector('#text').addEventListener('change', console.log(document.querySelector(this)));
+        $script->select('#text')->listener('change', $changeEvent)->end()->print(); // document.querySelector('#text').addEventListener('change', console.log(document.querySelector(this)));
 
         $eachEvent = $script->select('#text')->alert('An alert for every input!')->string(); // alert(document.querySelector('#text')) <- but saved as a PHP string
 
-        $script->selectAll("input[type='text']")->forEach($eachEvent); // document.querySelectorAll("input[type='text']").forEach(function () { alert('An alert for every input!') });
+        $script->selectAll("input[type='text']")->forEach($eachEvent)->end()->print(); // document.querySelectorAll("input[type='text']").forEach(function () { alert('An alert for every input!') });
 
         $script->endScript(); // </script>
     ?>
